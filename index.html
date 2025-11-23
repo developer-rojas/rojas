@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nery Ortiz — Portfolio</title>
+  <meta name="description" content="Portfolio of Roy Eid — Java Developer. Airline Management System and more." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header" role="banner">
+    <div class="container header__bar">
+      <a class="brand" href="#home">
+        <span class="brand__mark" aria-hidden="true">NO</span>
+        <span class="brand__text">Nery Ortiz</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#home">Inicio</a>
+        <a href="#aboutme">Sobre mí</a>
+        <a href="#featured">Destacado</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#education">Educación</a>
+        <a href="#contact">Contacto</a>
+        <button id="themeToggle" class="theme" aria-label="Theme">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="section hero" tabindex="-1">
+    <div class="container grid grid--2">
+      <div class="stack hero__copy">
+        <h1 class="title">Nery Ortiz</h1>
+        <p class="lead">Desarrollador Front-End para aplicaciones multiplataforma, apasionado por la experiencia del
+          usuario. Envío y recibo datos vía APIs o URLs para que la información llegue al usuario de forma clara y
+          eficiente.</p>
+        <div class="row">
+          <a class="btn btn--primary" href="#featured">Ver Proyecto Destacado</a>
+          <a class="btn" href="resume.pdf" download>Descargar CV</a>
+          <a class="btn btn--ghost" href="mailto:neryortiz874@gmail.com">Correo Electrónico</a>
+        </div>
+
+      </div>
+
+      <aside class="card hero__card">
+        <div class="initials" aria-hidden="true">NO</div>
+        <div class="meta">
+          <div class="meta__row">
+            <span>Correo</span>
+            <a href="mailto:neryortiz874@gmail.com">neryortiz874@gmail.com</a>
+          </div>
+          <div class="meta__row">
+            <span>Teléfono</span>
+            <a href="tel:+5950975617630">0975 617 630</a>
+          </div>
+          <div class="meta__row">
+            <span>Idiomas</span>
+            <span>Español, Guaraní, Inglés</span>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <section id="aboutme" class="section" style="padding-top: 4rem;">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title"></h2>
+      </header>
+
+      <div class="grid grid--1">
+        <article class="card project" style="text-align: center;">
+          <img src="/assets/img/profile.jpg" alt="Nery Ortiz" class="profile-img"
+            style="display: block; margin: 0 auto; width: 300px; height: 300px; border-radius: 50%; object-fit: cover;">
+          <h3 style="text-align: center; padding-top: 2rem;">Sobre mí </h3>
+          <p class="about_muted">
+            Soy un desarrollador enfocado en crear aplicaciones para el cliente final, priorizando el diseño, la calidad
+            y la experiencia del usuario. Me apasiona construir productos bien diseñados, optimizados y cómodos de usar,
+            porque creo que una aplicación no solo debe funcionar: también debe transmitir profesionalismo y representar
+            con dignidad a la empresa detrás de ella.</p>
+          <p> </p>
+          <p class="about_muted">
+            Mi dominio principal está en Java y Android Studio, pero siempre estoy abierto a nuevos desafíos.
+            Actualmente estoy aprendiendo React con bases ya robustas para crear interfaces modernas. Me considero
+            completamente autodidacta y con iniciativa propia: si aparece una herramienta o lenguaje nuevo, lo estudio,
+            lo entiendo y lo aplico sin necesidad de depender de alguien más. Incluso cuando desconozco un framework,
+            soy capaz de crear un producto final de calidad porque aprendo mientras desarrollo.</p>
+          <p> </p>
+          <p class="about_muted">
+            Mi mayor motor es la pasión. Programar para mí es un don y una fuente de creatividad. Me encanta diseñar
+            interfaces, crear animaciones y trabajar transiciones fluidas, buscando siempre ese acabado que hace que un
+            producto no solo funcione, sino que emocione. No me limito a escribir código: también diseño layouts,
+            íconos, imágenes, assets y todo lo necesario para llevar un proyecto al nivel más alto posible.</p>
+          <p> </p>
+          <p class="about_muted">
+            Soy ordenado, perfeccionista y detallista. Cuando se me asigna una tarea, la ejecuto con dedicación, y
+            cuando un proyecto me inspira, sigo trabajando incluso fuera de mi horario simplemente porque me gusta. Mi
+            forma de resolver problemas es mediante prueba y error, puliendo cada detalle hasta lograr exactamente lo
+            que busco.</p>
+          <p> </p>
+          <p class="about_muted">
+            También desarrollo videojuegos, como Sentesia, un proyecto dark fantasy en 3D creado en Unity. No lo hago
+            por monetizar, sino por pasión: quiero ofrecer físicas coherentes, interacciones reales y una experiencia de
+            calidad superior. Mi objetivo es competir con los mejores desarrolladores del país y demostrar que se puede
+            crear contenido profesional que priorice la experiencia del usuario por encima de todo.</p>
+          <p> </p>
+          <p class="about_muted">
+            En mis tiempos libres disfruto salir, pasear, conocer lugares, tomar tereré y aprovechar el día. Y si queda
+            un poco de tiempo extra, lo dedico a seguir avanzando con mis proyectos personales, porque programar también
+            es una forma de disfrutar.</p>
+          <p> </p>
+          <p class="about_muted">
+            Mi meta es clara: construir productos que inspiren, sorprendan y se sientan hechos con dedicación desde el
+            primer píxel hasta la última línea de código.</p>
+
+          <!-- Opcional: enlace a demo cuando esté disponible -->
+          <!-- <a class="btn" target="_blank" rel="noreferrer" href="link-a-demo">Demo</a> -->
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Featured project ===== -->
+  <section id="featured" class="section section--alt">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Proyecto Destacado</h2>
+        <p class="muted"></p>
+      </header>
+
+      <article class="grid grid--2 project project--featured">
+        <div class="stack">
+          <h3>Centro de Experiencia</h3>
+          <p>Aplicación multiplataforma desarrollada en <strong>React</strong> para los funcionarios de <strong>Biggie
+              Express</strong>. Permite consultar precios escaneando códigos de productos, gestionar gift cards, revisar
+            detalles de cuentas internas y otras funciones administrativas. Inicialmente desarrollada en Java para
+            Android, migrada a React para soporte multiplataforma.</p>
+          <ul class="list">
+            <li>Front-End enfocado en la experiencia del usuario final.</li>
+            <li>Escaneo de códigos y manejo de datos en tiempo real.</li>
+            <li>Gestión de cuentas internas y funciones administrativas para funcionarios.</li>
+          </ul>
+          <div class="row">
+            <span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">Android</span><span
+              class="chip">Front-End</span><span class="chip">Multiplataforma</span>
+          </div>
+          <!-- Opcional: enlace a demo o repositorio -->
+          <!-- <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/tu-usuario/centro-de-experiencia">Source / Demo</a> -->
+        </div>
+
+        <figure>
+          <!-- Replace screenshot.png with a real image if you have it -->
+          <img src="/assets/img/centro_experiencia.png" alt="Centro de Experiencia" class="rounded-img" />
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="section">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Proyectos</h2>
+      </header>
+
+      <div class="grid grid--2">
+        <article class="card project">
+          <h3>Sentesia</h3>
+          <p class="muted">
+            Sentesia es un juego 3D de estilo <strong>dark fantasy</strong> que combina un universo oscuro y estilizado
+            con mecánicas basadas en física para ofrecer una experiencia de exploración inmersiva. El juego está
+            cuidadosamente diseñado para priorizar la interacción del jugador y la experiencia de usuario (Front-End
+            UI/UX), brindando controles intuitivos y entornos detallados. Su demo estará disponible a partir del
+            <strong>2 de enero</strong>.
+          </p>
+
+          <div class="row">
+            <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">3D</span><span
+              class="chip">Front-End</span><span class="chip">Física</span>
+          </div>
+          <!-- Opcional: enlace a demo cuando esté disponible -->
+          <!-- <a class="btn" target="_blank" rel="noreferrer" href="link-a-demo">Demo</a> -->
+        </article>
+
+        <article class="card project">
+          <h3>Senderos del Paraguay</h3>
+          <p class="muted">
+            Aplicación de turismo diseñada para dispositivos móviles y Windows, que permite explorar los principales
+            puntos turísticos de Paraguay mediante mapas interactivos. Integrada con <strong>Firebase</strong> para
+            gestión de usuarios y datos en tiempo real, y <strong>Mapbox</strong> para navegación y visualización de
+            ubicaciones. El proyecto está orientado a ofrecer una experiencia clara y atractiva al usuario final, con
+            interfaces intuitivas y controles eficientes.
+          </p>
+          <div class="row">
+            <span class="chip">Android</span><span class="chip">React</span><span class="chip">Firebase</span><span
+              class="chip">Mapbox</span><span class="chip">Front-End</span>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- ===== Skills ===== -->
+  <section id="skills" class="section section--alt">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Habilidades</h2>
+      </header>
+
+      <div class="grid grid--3">
+        <!-- Tech -->
+        <div class="card stack">
+          <h3>Tecnología</h3>
+          <div class="row row--wrap">
+            <span class="chip">WinUI 3 / WPF</span>
+            <span class="chip">Windows Forms</span>
+            <span class="chip">Front-End</span>
+            <span class="chip">Java</span>
+            <span class="chip">React</span>
+            <span class="chip">Unity</span>
+            <span class="chip">C#</span>
+            <span class="chip">XML</span>
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">Android Studio</span>
+          </div>
+        </div>
+
+        <!-- Professional -->
+        <div class="card stack">
+          <h3>Profesional</h3>
+          <div class="row row--wrap">
+            <span class="chip">Atención al detalle</span>
+            <span class="chip">Resolución de problemas</span>
+            <span class="chip">Autodidacta</span>
+            <span class="chip">Iniciativa propia</span>
+            <span class="chip">Perfeccionista en UI/UX</span>
+            <span class="chip">Aprender rápido nuevos lenguajes</span>
+            <span class="chip">Pasión por la programación</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="card stack">
+          <h3>Herramientas</h3>
+          <div class="row row--wrap">
+            <span class="chip">Visual Studio Code</span>
+            <span class="chip">Unity Editor</span>
+            <span class="chip">Android Studio</span>
+            <span class="chip">Play Console</span>
+            <span class="chip">Photoshop</span>
+            <span class="chip">Lightroom</span>
+            <span class="chip">After Effects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== Experience ===== -->
+  <section id="experience" class="section">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Experiencia</h2>
+      </header>
+
+      <article class="card timeline">
+        <div class="timeline__item">
+          <div class="timeline__head">
+            <h3>Cajero Líder Nocturno</h3>
+            <span class="muted">Biggie Express — 2025 – Presente</span>
+          </div>
+          <ul class="list">
+            <li>Responsable del turno nocturno, asignando tareas y coordinando al personal a cargo.</li>
+            <li>Manejo de conflictos internos y resolución de problemas durante el turno.</li>
+            <li>Atención a reclamos y consultas de clientes, garantizando una experiencia satisfactoria.</li>
+            <li>Cierre de caja, arqueo de efectivo y depósito seguro.</li>
+            <li>Carga de facturas y envío de sobres según procedimientos internos.</li>
+            <li>Conteo y verificación diaria del sencillo grande para mantener precisión contable.</li>
+          </ul>
+
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Education ===== -->
+  <section id="education" class="section section--alt">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Educación</h2>
+      </header>
+
+      <div class="grid grid--2">
+        <article class="card stack">
+          <h3>Bachillerato Técnico En Contabilidad</h3>
+          <p class="muted">Colegio Nacional Haruo Masuzawa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section">
+    <div class="container stack">
+      <header class="section__head">
+        <h2 class="section__title">Contacto</h2>
+      </header>
+
+      <article class="card contact">
+        <p><strong>Correo:</strong> <a href="mailto:neryortiz874@gmail.com">neryortiz874@gmail.com</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+5950975617630">0975-617-630
+          </a></p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> ROJAS DEV. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
