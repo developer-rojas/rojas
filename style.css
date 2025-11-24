@@ -261,22 +261,41 @@ body {
 @media (max-width:860px) {
   .nav-toggle {
     display: inline-flex;
+    z-index: 50;
   }
 
   .nav {
     position: fixed;
-    inset: 64px 0 auto 0;
-    padding: 1rem 1.25rem;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    transform: translateY(-120%);
-    transition: transform 0.25s ease;
+    inset: 0;
+    padding: 5rem 2rem 2rem;
+    background: rgba(19, 9, 12, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: none;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
+    align-items: flex-start;
+    overflow-y: auto;
   }
 
   .nav.open {
-    transform: translateY(0);
+    transform: translateX(0);
+  }
+
+  .nav a {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 12px;
+  }
+
+  .theme {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    justify-content: center;
   }
 }
 
@@ -567,4 +586,5 @@ body {
   padding: var(--s4) 0;
   border-top: 1px solid var(--border);
   background: var(--surface);
+  text-align: center;
 }
