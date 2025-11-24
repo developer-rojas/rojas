@@ -261,7 +261,8 @@ body {
 @media (max-width:860px) {
   .nav-toggle {
     display: inline-flex;
-    z-index: 50;
+    z-index: 100;
+    position: relative;
   }
 
   .nav {
@@ -278,6 +279,7 @@ body {
     gap: 0.5rem;
     align-items: flex-start;
     overflow-y: auto;
+    z-index: 99;
   }
 
   .nav.open {
