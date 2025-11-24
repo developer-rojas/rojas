@@ -17,7 +17,7 @@
   <header class="header" role="banner">
     <div class="container header__bar">
       <a class="brand" href="#home">
-        <span class="brand__mark" aria-hidden="true">NO</span>
+        <img src="/assets/img/logo.svg" alt="Logo Nery Ortiz" style="width: 60px; height: 60px;">
         <span class="brand__text">Nery Ortiz</span>
       </a>
 
@@ -51,14 +51,14 @@
           eficiente.</p>
         <div class="row">
           <a class="btn btn--primary" href="#featured">Ver Proyecto Destacado</a>
-          <a class="btn" href="resume.pdf" download>Descargar CV</a>
+          <a class="btn" href="portfolio/cv.pdf" download>Descargar CV</a>
           <a class="btn btn--ghost" href="mailto:neryortiz874@gmail.com">Correo Electrónico</a>
         </div>
 
       </div>
 
       <aside class="card hero__card">
-        <div class="initials" aria-hidden="true">NO</div>
+        <img src="/assets/img/logo.svg" alt="Logo Nery Ortiz" style="width: 60px; height: 60px;">
         <div class="meta">
           <div class="meta__row">
             <span>Correo</span>
@@ -146,31 +146,41 @@
         <p class="muted"></p>
       </header>
 
-      <article class="grid grid--2 project project--featured">
-        <div class="stack">
-          <h3>Centro de Experiencia</h3>
-          <p>Aplicación multiplataforma desarrollada en <strong>React</strong> para los funcionarios de <strong>Biggie
-              Express</strong>. Permite consultar precios escaneando códigos de productos, gestionar gift cards, revisar
-            detalles de cuentas internas y otras funciones administrativas. Inicialmente desarrollada en Java para
-            Android, migrada a React para soporte multiplataforma.</p>
-          <ul class="list">
-            <li>Front-End enfocado en la experiencia del usuario final.</li>
-            <li>Escaneo de códigos y manejo de datos en tiempo real.</li>
-            <li>Gestión de cuentas internas y funciones administrativas para funcionarios.</li>
-          </ul>
-          <div class="row">
-            <span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">Android</span><span
-              class="chip">Front-End</span><span class="chip">Multiplataforma</span>
-          </div>
-          <!-- Opcional: enlace a demo o repositorio -->
-          <!-- <a class="btn" target="_blank" rel="noreferrer" href="https://github.com/tu-usuario/centro-de-experiencia">Source / Demo</a> -->
+      <article class="card project">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+          <img src="/assets/img/centro_experiencia.png" alt="Centro de Experiencia"
+            style="width: 60px; height: 60px; object-fit: cover; border-radius: 12px;">
+          <h3 style="margin: 0;">Centro de Experiencia</h3>
+        </div>
+        <p>Aplicación multiplataforma desarrollada en <strong>React</strong> para los funcionarios de <strong>Biggie
+            Express</strong>. Permite consultar precios escaneando códigos de productos, gestionar gift cards, revisar
+          detalles de cuentas internas y otras funciones administrativas. Inicialmente fue desarrollada en Java para
+          Android, migrada a React para soporte multiplataforma.</p>
+        <ul>
+          <li>Front-End enfocado en la experiencia del usuario final.</li>
+          <li>Escaneo de códigos y manejo de datos en tiempo real.</li>
+          <li>Gestión de cuentas internas y funciones administrativas para funcionarios.</li>
+        </ul>
+        <div class="row">
+          <span class="chip">React</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Android</span>
+          <span class="chip">Front-End</span>
+          <span class="chip">Multiplataforma</span>
         </div>
 
-        <figure>
-          <!-- Replace screenshot.png with a real image if you have it -->
-          <img src="/assets/img/centro_experiencia.png" alt="Centro de Experiencia" class="rounded-img" />
-        </figure>
+        <a href="https://play.google.com/store/apps/details?id=py.com.rojas.price&pcampaignid=web_share"
+          class="btn btn--play" target="_blank" rel="noreferrer">
+          <svg class="icon" viewBox="0 0 192 192"
+            style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round;">
+            <path
+              d="M156.84 109.93 54.96 167.87c-10.68 6.07-23.94-1.64-23.94-13.93V38.06c0-12.29 13.26-20 23.94-13.93l101.88 57.94c10.8 6.14 10.8 21.71 0 27.85Z" />
+            <path d="m35 33 88 90m-88 34.61L124 67" />
+          </svg>
+          Ver en Google Play
+        </a>
       </article>
+
     </div>
   </section>
 
@@ -287,19 +297,37 @@
 
       <article class="card timeline">
         <div class="timeline__item">
-          <div class="timeline__head">
-            <h3>Cajero Líder Nocturno</h3>
-            <span class="muted">Biggie Express — 2025 – Presente</span>
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__head">
+              <h3>Líder Nocturno (Ascenso)</h3>
+              <span class="muted">Biggie Express — Febrero 2025 – Presente</span>
+              <span class="muted" style="display: block; font-size: 0.85rem;">Ciudad del Este, Paraguay</span>
+            </div>
+            <ul class="list">
+              <li>Supervisión del personal durante el turno noche.</li>
+              <li>Asignación de tareas, control de desempeño y resolución de conflictos internos.</li>
+              <li>Manejo completo de caja: arqueo final, cierre y depósito de efectivo.</li>
+              <li>Carga de facturas, preparación y envío de sobres.</li>
+            </ul>
           </div>
-          <ul class="list">
-            <li>Responsable del turno nocturno, asignando tareas y coordinando al personal a cargo.</li>
-            <li>Manejo de conflictos internos y resolución de problemas durante el turno.</li>
-            <li>Atención a reclamos y consultas de clientes, garantizando una experiencia satisfactoria.</li>
-            <li>Cierre de caja, arqueo de efectivo y depósito seguro.</li>
-            <li>Carga de facturas y envío de sobres según procedimientos internos.</li>
-            <li>Conteo y verificación diaria del sencillo grande para mantener precisión contable.</li>
-          </ul>
+        </div>
 
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__content">
+            <div class="timeline__head">
+              <h3>Cajero (Turno Día)</h3>
+              <span class="muted">Biggie Express — 30 de Octubre 2024 – Febrero 2025</span>
+              <span class="muted" style="display: block; font-size: 0.85rem;">Ciudad del Este, Paraguay</span>
+            </div>
+            <ul class="list">
+              <li>Atención al cliente y cobro de productos.</li>
+              <li>Manejo de caja y arqueos durante el turno.</li>
+              <li>Reposición de productos y orden del local.</li>
+              <li>Resolución básica de reclamos y apoyo operativo en tienda.</li>
+            </ul>
+          </div>
         </div>
       </article>
     </div>
