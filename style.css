@@ -436,6 +436,19 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* Altura del logo */
+  width: 40px; /* Ancho del logo */
+  z-index: 1002; /* Para que esté por encima del menú móvil */
+}
+
+.header__logo img {
+  height: 100%;
+}
+
 .header__bar {
   display: flex;
   align-items: center;
