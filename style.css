@@ -16,6 +16,9 @@
   flex-direction: column;
   gap: 5px;
   z-index: 1001;
+  margin-right: auto;
+  margin-left: 5%;
+  color: inherit;
 }
 
 .nav-toggle span {
@@ -28,15 +31,15 @@
 }
 
 /* ANIMACIÓN DEL BOTÓN */
-.nav.open+.nav-toggle span:nth-child(1) {
+.nav.open + .nav-toggle span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.nav.open+.nav-toggle span:nth-child(2) {
+.nav.open + .nav-toggle span:nth-child(2) {
   opacity: 0;
 }
 
-.nav.open+.nav-toggle span:nth-child(3) {
+.nav.open + .nav-toggle span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
@@ -65,21 +68,6 @@
   max-width: 320px;
 }
 
-/* ITEMS */
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--border, #444);
-  border-radius: 12px;
-  margin: 0 1rem;
-  background: var(--card-bg, #1a1a1a);
-  text-decoration: none;
-  color: inherit;
-  transition: background 0.2s;
-}
-
 .nav-item:hover {
   background: var(--card-hover, #222);
 }
@@ -101,7 +89,92 @@
   background: var(--card-bg, #1a1a1a);
 }
 
-/* MODO ESCRITORIO */
+/* ================= Móvil (≤ 767px) ================= */
+@media (max-width: 767px) {
+  .nav {
+    display: flex;
+    flex-direction: column; /* items uno debajo del otro */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .nav-item,
+  #themeToggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+    padding: 10px 15px;
+    padding: 12px 15px;
+    margin-bottom: 0.5rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    /* Propiedades para el efecto de gradiente */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  #themeToggle {
+    display: none; /* oculto por defecto */
+  }
+
+  /* Se muestra toggle solo si el menú está abierto */
+  .nav.is-open #themeToggle {
+    display: flex;
+  }
+
+  /* Añade padding al menú para separar los items de los bordes */
+  .nav.open {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Efecto hover/active para móvil */
+  .nav-item:hover,
+  .nav-item:active {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+    border-color: transparent;
+    color: #fff;
+    background: transparent; /* El fondo lo dará el ::before */
+  }
+  .nav-item:hover::before,
+  .nav-item:active::before {
+    opacity: 1;
+  }
+.hero__card {
+    flex-direction: row;     /* horizontal */
+    align-items: center;     /* centrado vertical */
+    justify-content: flex-start; /* alinea todo a la izquierda */
+    gap: 1rem;               /* espacio entre icono y texto */
+    padding: 10px 15px;
+  }
+
+  /* Asegúrate de que el icono no se achique */
+  .hero__card > svg,
+  .hero__card > img {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  /* El texto ocupa el espacio restante */
+  .hero__card > span,
+  .hero__card > p {
+    flex: 1;
+  }
+
+  [data-theme="light"] .nav.is-open { background-color: #fff; }
+  [data-theme="dark"] .nav.is-open { background-color: #111; }
+}
+
+
+/* ================= Desktop (≥ 768px) ================= */
 @media (min-width: 768px) {
   /* Estilos para la barra del encabezado */
   .header__bar {
@@ -112,14 +185,13 @@
   }
 
   .nav {
+    display: flex;
+    flex-direction: row;
     position: static;
     width: auto;
     height: auto;
-    left: auto; /* Asegura que no haya un left residual del móvil */
-    top: auto;  /* Asegura que no haya un top residual del móvil */
-    right: auto; /* Asegura que no haya un right residual del móvil */
-    bottom: auto; /* Asegura que no haya un bottom residual del móvil */
     background: transparent;
+    padding: 0;
     overflow: visible;
     flex-direction: row;
     align-items: center;
@@ -133,31 +205,34 @@
   /* Anula el estado 'open' en escritorio para evitar que se quede con un ancho fijo */
   .nav.open {
     /* Asegura que el estado 'open' no tenga ningún efecto en escritorio */
-    width: auto; 
+    width: auto;
   }
 
-  .nav-item {
-    margin: 0;
+  .nav-item,
+  #themeToggle {
+    /* Estilos base para el layout de texto + icono */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text);
+    background: transparent;
     border: none;
-    background: none;
-    padding: 0; /* Eliminamos todo el padding */
-    border-radius: 0;
-    gap: 0.5rem; /* Espacio entre el icono y el texto */
-    transition: color 0.2s ease;
+    padding: 0.5rem; /* Padding para un área de clic cómoda */
+    border-radius: var(--radius);
+    /* Propiedades para el efecto de gradiente */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
   .nav-item:hover {
-    background: transparent; /* Nos aseguramos que no haya fondo */
-    color: var(--primary); /* Cambia el color del texto e icono al pasar el ratón */
+    color: #fff;
   }
 
-  .theme {
-    margin: 0; /* Resetea el margen del botón de tema */
-    padding: 0.5rem; /* Padding para un área de clic adecuada */
-    border: none; /* Reinicia el borde del botón de tema */
-    min-height: auto; /* Anula el min-height: 100vh del móvil */
-    display: flex; /* Asegura que se muestre como flex para alinear el icono */
-    background: transparent; /* Reinicia el fondo del botón de tema */
+  .nav-item:hover::before {
+    opacity: 1;
   }
 
   .nav-toggle {
@@ -166,7 +241,20 @@
     pointer-events: none; /* Desactiva cualquier interacción */
   }
 }
-
+/* Estilos específicos para el botón de tema en escritorio */
+@media (min-width: 768px) {
+  #themeToggle {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    font-weight: 700;
+  }
+  #themeToggle:hover {
+    transform: translateY(-2px);
+    border-color: transparent;
+    color: #fff;
+  }
+  #themeToggle:hover::before { opacity: 1; }
+}
 
 html:focus-within {
   scroll-behavior: smooth;
@@ -183,6 +271,18 @@ a {
   color: inherit;
 }
 
+/* Pseudo-elemento para el fondo de gradiente en nav-item (ahora es global) */
+.nav-item::before,
+#themeToggle::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 /* ===== Variables Globales ===== */
 :root {
   /* Colores Base */
@@ -196,6 +296,7 @@ a {
   --card: #11070a;
   --border: #2a1216;
   --radius: 18px;
+  --nav-item-hover-bg: #1f0d11; /* Color para hover/active en menú móvil (oscuro) */
   --shadow: 0 14px 36px rgba(46, 8, 12, 0.45);
 
   /* Tamaños */
@@ -213,7 +314,11 @@ a {
   --gradient-body: linear-gradient(120deg, var(--bg) 0%, var(--surface) 100%);
   --gradient-card: var(--card);
   --gradient-hero: linear-gradient(135deg, var(--primary) 10%, var(--accent));
-  --gradient-btn-primary: linear-gradient(135deg, var(--accent), var(--primary));
+  --gradient-btn-primary: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--primary)
+  );
 }
 
 /* ===== Tema Claro ===== */
@@ -227,19 +332,22 @@ html[data-theme="light"] {
   --accent2: #f97316;
   --card: #ffffff;
   --border: #f1d6d6;
+  --nav-item-hover-bg: #fdf0f0; /* Color para hover/active en menú móvil (claro) */
   --shadow: 0 12px 28px rgba(120, 16, 40, 0.12);
 }
 
 /* ===== Layout ===== */
 body {
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, "Helvetica Neue", Arial, sans-serif;
   color: var(--text);
   background: var(--gradient-body);
   line-height: 1.65;
 }
 
 .container {
-  width: min(100% - 2rem, var(--container));
+  width: min(100% - 1rem, var(--container));
+  height: 100%;
   margin-inline: auto;
 }
 
@@ -252,7 +360,7 @@ body {
   background: var(--surface);
 }
 
-.stack>*+* {
+.stack > * + * {
   margin-top: var(--s2);
 }
 
@@ -281,8 +389,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 
-@media (max-width:980px) {
-
+@media (max-width: 980px) {
   .grid--2,
   .grid--3 {
     grid-template-columns: 1fr;
@@ -318,8 +425,12 @@ body {
 /* ===== Header / Nav ===== */
 .header {
   position: sticky;
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;
   top: 0;
-  z-index: 40;
+  z-index: 100;
+  min-height: 70px;
   backdrop-filter: blur(10px);
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -330,10 +441,7 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.nav a:hover::before {
-  opacity: 1;
+  height: 100%;
 }
 
 .theme {
@@ -394,7 +502,7 @@ body {
   gap: 10px;
 }
 
-@media (max-width:980px) {
+@media (max-width: 980px) {
   .hero {
     min-height: auto;
     padding-top: 4rem;
@@ -431,7 +539,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+  background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -478,7 +586,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+  background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -500,14 +608,15 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .btn--play::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+  background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -525,7 +634,7 @@ body {
 }
 
 .btn--play .icon {
-  stroke: #34A853;
+  stroke: #34a853;
   transition: stroke 0.3s ease;
   position: relative;
   z-index: 2;
@@ -591,7 +700,7 @@ body {
   padding-left: 4rem;
 }
 
-.timeline__item+.timeline__item {
+.timeline__item + .timeline__item {
   margin-top: var(--s4);
 }
 

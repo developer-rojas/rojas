@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="auto">
 
 <head>
@@ -6,149 +6,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nery Ortiz — Portfolio</title>
   <meta name="description" content="Portfolio of Roy Eid — Java Developer. Airline Management System and more." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <style>
-    /* Ajustes para el botón de tema y el menú de navegación */
-    @media (min-width: 768px) {
-      .header__bar {
-        position: relative;
-      }
-
-      #themeToggle {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
-
-    @media (max-width: 767px) {
-      #themeToggle {
-        display: none; /* Ocultar por defecto en móvil */
-      }
-      .nav.is-open #themeToggle {
-        display: flex; /* Mostrar solo cuando el menú está abierto */
-        margin-top: 1rem;
-        padding: 0.5rem;
-        width: auto;
-      }
-      [data-theme="light"] .nav.is-open { background-color: #fff; }
-      [data-theme="dark"] .nav.is-open { background-color: #111; }
-    }
-  </style>
 </head>
 
 <body>
   <!-- ===== Header ===== -->
   <header class="header" role="banner">
-    <div class="container header__bar">
-  
-      
-      <nav id="main-nav" class="nav" aria-label="Primary">
-        <a href="#home" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <polyline points="9 22 9 12 15 12 15 22" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>Inicio</span>
-        </a>
-        <a href="#aboutme" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <span>Sobre mí</span>
-        </a>
-        <a href="#featured" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <polygon
-              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>Destacado</span>
-        </a>
-        <a href="#projects" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>Proyectos</span>
-        </a>
-        <a href="#skills" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <path d="M12 2L2 7l10 5 10-5-10-5z" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>Habilidades</span>
-        </a>
-        <a href="#experience" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
-          <span>Experiencia</span>
-        </a>
-        <a href="#education" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M6 12v5c3 3 9 3 12 0v-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <span>Educación</span>
-        </a>
-        <a href="#contact" class="nav-item">
-          <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          <span>Contacto</span>
-        </a>
-      </nav>
-
-      <button class="nav-toggle" aria-label="Menu" aria-controls="main-nav"
-        aria-expanded="false"><span></span><span></span><span></span></button>
-
-      <button id="themeToggle" class="theme" aria-label="Theme">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+    <nav id="main-nav" class="nav" aria-label="Primary">
+      <a href="#home" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+        </svg> <span>Inicio</span>
+      </a>
+      <a href="#aboutme" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
         </svg>
-      </button>
-    </div>
+        <span>Sobre mí</span>
+      </a>
+      <a href="#featured" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M852-212 732-332l56-56 120 120-56 56ZM708-692l-56-56 120-120 56 56-120 120Zm-456 0L132-812l56-56 120 120-56 56ZM108-212l-56-56 120-120 56 56-120 120Zm246-75 126-76 126 77-33-144 111-96-146-13-58-136-58 135-146 13 111 97-33 143ZM233-120l65-281L80-590l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-361Z" />
+        </svg>
+        <span>Destacado</span>
+      </a>
+      <a href="#projects" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z" />
+        </svg> <span>Proyectos</span>
+      </a>
+       <a href="#skills" class="nav-item">
+      <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+        <path
+          d="M480-118 120-398l66-50 294 228 294-228 66 50-360 280Zm0-202L120-600l360-280 360 280-360 280Zm0-280Zm0 178 230-178-230-178-230 178 230 178Z" />
+      </svg> <span>Habilidades</span>
+      </a>
+      <a href="#experience" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M160-200v-440 440-15 15Zm0 80q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v171q-18-13-38-22.5T800-508v-132H160v440h283q3 21 9 41t15 39H160Zm240-600h160v-80H400v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40Zm20-208v-112h-40v128l86 86 28-28-74-74Z" />
+        </svg> <span>Experiencia</span>
+      </a>
+      <a href="#education" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
+        </svg> <span>Educación</span>
+      </a>
+      <a href="#contact" class="nav-item">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+        </svg> <span>Contacto</span>
+      </a>
+
+      <a href="#!" class="nav-item" data-action="toggle-theme">
+        <svg height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+          <path
+            d="M600-640 480-760l120-120 120 120-120 120Zm200 120-80-80 80-80 80 80-80 80ZM483-80q-84 0-157.5-32t-128-86.5Q143-253 111-326.5T79-484q0-146 93-257.5T409-880q-18 99 11 193.5T520-521q71 71 165.5 100T879-410q-26 144-138 237T483-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T463-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T159-484q0 135 94.5 229.5T483-160Zm-20-305Z" />
+        </svg>
+        <span>Tema</span>
+      </a>
+
+    </nav>
+
+    <button class="nav-toggle" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main id="home" class="section hero" tabindex="-1">
     <div class="container grid grid--2">
       <div class="stack hero__copy">
         <h1 class="title">Nery Ortiz</h1>
-        <p class="lead">Desarrollador Front-End para aplicaciones multiplataforma, apasionado por la experiencia del
-          usuario. Envío y recibo datos vía APIs o URLs para que la información llegue al usuario de forma clara y
-          eficiente.</p>
+        <p class="lead">
+          Desarrollador Front-End para aplicaciones multiplataforma,
+          apasionado por la experiencia del usuario. Envío y recibo datos vía
+          APIs o URLs para que la información llegue al usuario de forma clara
+          y eficiente.
+        </p>
         <div class="row">
           <a class="btn btn--primary" href="#featured">Ver Proyecto Destacado</a>
           <a class="btn" href="portfolio/cv.pdf" download>Descargar CV</a>
           <a class="btn btn--ghost" href="mailto:neryortiz874@gmail.com">Correo Electrónico</a>
         </div>
-
       </div>
 
       <aside class="card hero__card">
-        <img src="/assets/img/logo.svg" alt="Logo Nery Ortiz" style="width: 60px; height: 60px;">
+        <img src="/assets/img/logo.svg" alt="Logo Nery Ortiz" style="width: 60px; height: 60px" />
         <div class="meta">
           <div class="meta__row">
             <span>Correo</span>
@@ -164,69 +116,93 @@
           </div>
         </div>
       </aside>
-
     </div>
   </main>
 
-  <section id="aboutme" class="section" style="padding-top: 4rem;">
+  <section id="aboutme" class="section" style="padding-top: 4rem">
     <div class="container stack">
       <header class="section__head">
         <h2 class="section__title"></h2>
       </header>
 
       <div class="grid grid--1">
-        <article class="card project" style="text-align: center;">
-          <img src="/assets/img/profile.jpg" alt="Nery Ortiz" class="profile-img"
-            style="display: block; margin: 0 auto; width: 300px; height: 300px; border-radius: 50%; object-fit: cover;">
-          <h3 style="text-align: center; padding-top: 2rem;">Sobre mí </h3>
+        <article class="card project" style="text-align: center">
+          <img src="/assets/img/profile.jpg" alt="Nery Ortiz" class="profile-img" style="
+                display: block;
+                margin: 0 auto;
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                object-fit: cover;
+              " />
+          <h3 style="text-align: center; padding-top: 2rem">Sobre mí</h3>
           <p class="about_muted">
-            Soy un desarrollador enfocado en crear aplicaciones para el cliente final, priorizando el diseño, la calidad
-            y la experiencia del usuario. Me apasiona construir productos bien diseñados, optimizados y cómodos de usar,
-            porque creo que una aplicación no solo debe funcionar: también debe transmitir profesionalismo y representar
-            con dignidad a la empresa detrás de ella.</p>
-          <p> </p>
+            Soy un desarrollador enfocado en crear aplicaciones para el
+            cliente final, priorizando el diseño, la calidad y la experiencia
+            del usuario. Me apasiona construir productos bien diseñados,
+            optimizados y cómodos de usar, porque creo que una aplicación no
+            solo debe funcionar: también debe transmitir profesionalismo y
+            representar con dignidad a la empresa detrás de ella.
+          </p>
+          <p></p>
           <p class="about_muted">
-            Mi dominio principal está en Java y Android Studio, pero siempre estoy abierto a nuevos desafíos.
-            Actualmente estoy aprendiendo React con bases ya robustas para crear interfaces modernas. Me considero
-            completamente autodidacta y con iniciativa propia: si aparece una herramienta o lenguaje nuevo, lo estudio,
-            lo entiendo y lo aplico sin necesidad de depender de alguien más. Incluso cuando desconozco un framework,
-            soy capaz de crear un producto final de calidad porque aprendo mientras desarrollo.</p>
-          <p> </p>
+            Mi dominio principal está en Java y Android Studio, pero siempre
+            estoy abierto a nuevos desafíos. Actualmente estoy aprendiendo
+            React con bases ya robustas para crear interfaces modernas. Me
+            considero completamente autodidacta y con iniciativa propia: si
+            aparece una herramienta o lenguaje nuevo, lo estudio, lo entiendo
+            y lo aplico sin necesidad de depender de alguien más. Incluso
+            cuando desconozco un framework, soy capaz de crear un producto
+            final de calidad porque aprendo mientras desarrollo.
+          </p>
+          <p></p>
           <p class="about_muted">
-            Mi mayor motor es la pasión. Programar para mí es un don y una fuente de creatividad. Me encanta diseñar
-            interfaces, crear animaciones y trabajar transiciones fluidas, buscando siempre ese acabado que hace que un
-            producto no solo funcione, sino que emocione. No me limito a escribir código: también diseño layouts,
-            íconos, imágenes, assets y todo lo necesario para llevar un proyecto al nivel más alto posible.</p>
-          <p> </p>
+            Mi mayor motor es la pasión. Programar para mí es un don y una
+            fuente de creatividad. Me encanta diseñar interfaces, crear
+            animaciones y trabajar transiciones fluidas, buscando siempre ese
+            acabado que hace que un producto no solo funcione, sino que
+            emocione. No me limito a escribir código: también diseño layouts,
+            íconos, imágenes, assets y todo lo necesario para llevar un
+            proyecto al nivel más alto posible.
+          </p>
+          <p></p>
           <p class="about_muted">
-            Soy ordenado, perfeccionista y detallista. Cuando se me asigna una tarea, la ejecuto con dedicación, y
-            cuando un proyecto me inspira, sigo trabajando incluso fuera de mi horario simplemente porque me gusta. Mi
-            forma de resolver problemas es mediante prueba y error, puliendo cada detalle hasta lograr exactamente lo
-            que busco.</p>
-          <p> </p>
+            Soy ordenado, perfeccionista y detallista. Cuando se me asigna una
+            tarea, la ejecuto con dedicación, y cuando un proyecto me inspira,
+            sigo trabajando incluso fuera de mi horario simplemente porque me
+            gusta. Mi forma de resolver problemas es mediante prueba y error,
+            puliendo cada detalle hasta lograr exactamente lo que busco.
+          </p>
+          <p></p>
           <p class="about_muted">
-            También desarrollo videojuegos, como Sentesia, un proyecto dark fantasy en 3D creado en Unity. No lo hago
-            por monetizar, sino por pasión: quiero ofrecer físicas coherentes, interacciones reales y una experiencia de
-            calidad superior. Mi objetivo es competir con los mejores desarrolladores del país y demostrar que se puede
-            crear contenido profesional que priorice la experiencia del usuario por encima de todo.</p>
-          <p> </p>
+            También desarrollo videojuegos, como Sentesia, un proyecto dark
+            fantasy en 3D creado en Unity. No lo hago por monetizar, sino por
+            pasión: quiero ofrecer físicas coherentes, interacciones reales y
+            una experiencia de calidad superior. Mi objetivo es competir con
+            los mejores desarrolladores del país y demostrar que se puede
+            crear contenido profesional que priorice la experiencia del
+            usuario por encima de todo.
+          </p>
+          <p></p>
           <p class="about_muted">
-            En mis tiempos libres disfruto salir, pasear, conocer lugares, tomar tereré y aprovechar el día. Y si queda
-            un poco de tiempo extra, lo dedico a seguir avanzando con mis proyectos personales, porque programar también
-            es una forma de disfrutar.</p>
-          <p> </p>
+            En mis tiempos libres disfruto salir, pasear, conocer lugares,
+            tomar tereré y aprovechar el día. Y si queda un poco de tiempo
+            extra, lo dedico a seguir avanzando con mis proyectos personales,
+            porque programar también es una forma de disfrutar.
+          </p>
+          <p></p>
           <p class="about_muted">
-            Mi meta es clara: construir productos que inspiren, sorprendan y se sientan hechos con dedicación desde el
-            primer píxel hasta la última línea de código.</p>
+            Mi meta es clara: construir productos que inspiren, sorprendan y
+            se sientan hechos con dedicación desde el primer píxel hasta la
+            última línea de código.
+          </p>
 
           <!-- Opcional: enlace a demo cuando esté disponible -->
           <!-- <a class="btn" target="_blank" rel="noreferrer" href="link-a-demo">Demo</a> -->
         </article>
-
       </div>
     </div>
   </section>
-
 
   <!-- ===== Featured project ===== -->
   <section id="featured" class="section section--alt">
@@ -237,19 +213,36 @@
       </header>
 
       <article class="card project">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-          <img src="/assets/img/centro_experiencia.png" alt="Centro de Experiencia"
-            style="width: 60px; height: 60px; object-fit: cover; border-radius: 12px;">
-          <h3 style="margin: 0;">Centro de Experiencia</h3>
+        <div style="
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              margin-bottom: 1rem;
+            ">
+          <img src="/assets/img/centro_experiencia.png" alt="Centro de Experiencia" style="
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 12px;
+              " />
+          <h3 style="margin: 0">Centro de Experiencia</h3>
         </div>
-        <p>Aplicación multiplataforma desarrollada en <strong>React</strong> para los funcionarios de <strong>Biggie
-            Express</strong>. Permite consultar precios escaneando códigos de productos, gestionar gift cards, revisar
-          detalles de cuentas internas y otras funciones administrativas. Inicialmente fue desarrollada en Java para
-          Android, migrada a React para soporte multiplataforma.</p>
+        <p>
+          Aplicación multiplataforma desarrollada en
+          <strong>React</strong> para los funcionarios de
+          <strong>Biggie Express</strong>. Permite consultar precios
+          escaneando códigos de productos, gestionar gift cards, revisar
+          detalles de cuentas internas y otras funciones administrativas.
+          Inicialmente fue desarrollada en Java para Android, migrada a React
+          para soporte multiplataforma.
+        </p>
         <ul>
           <li>Front-End enfocado en la experiencia del usuario final.</li>
           <li>Escaneo de códigos y manejo de datos en tiempo real.</li>
-          <li>Gestión de cuentas internas y funciones administrativas para funcionarios.</li>
+          <li>
+            Gestión de cuentas internas y funciones administrativas para
+            funcionarios.
+          </li>
         </ul>
         <div class="row">
           <span class="chip">React</span>
@@ -261,8 +254,15 @@
 
         <a href="https://play.google.com/store/apps/details?id=py.com.rojas.price&pcampaignid=web_share"
           class="btn btn--play" target="_blank" rel="noreferrer">
-          <svg class="icon" viewBox="0 0 192 192"
-            style="width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round;">
+          <svg class="icon" viewBox="0 0 192 192" style="
+                width: 24px;
+                height: 24px;
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 12;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+              ">
             <path
               d="M156.84 109.93 54.96 167.87c-10.68 6.07-23.94-1.64-23.94-13.93V38.06c0-12.29 13.26-20 23.94-13.93l101.88 57.94c10.8 6.14 10.8 21.71 0 27.85Z" />
             <path d="m35 33 88 90m-88 34.61L124 67" />
@@ -270,7 +270,6 @@
           Ver en Google Play
         </a>
       </article>
-
     </div>
   </section>
 
@@ -285,11 +284,14 @@
         <article class="card project">
           <h3>Sentesia</h3>
           <p class="muted">
-            Sentesia es un juego 3D de estilo <strong>dark fantasy</strong> que combina un universo oscuro y estilizado
-            con mecánicas basadas en física para ofrecer una experiencia de exploración inmersiva. El juego está
-            cuidadosamente diseñado para priorizar la interacción del jugador y la experiencia de usuario (Front-End
-            UI/UX), brindando controles intuitivos y entornos detallados. Su demo estará disponible a partir del
-            <strong>2 de enero</strong>.
+            Sentesia es un juego 3D de estilo
+            <strong>dark fantasy</strong> que combina un universo oscuro y
+            estilizado con mecánicas basadas en física para ofrecer una
+            experiencia de exploración inmersiva. El juego está cuidadosamente
+            diseñado para priorizar la interacción del jugador y la
+            experiencia de usuario (Front-End UI/UX), brindando controles
+            intuitivos y entornos detallados. Su demo estará disponible a
+            partir del <strong>2 de enero</strong>.
           </p>
 
           <div class="row">
@@ -303,19 +305,20 @@
         <article class="card project">
           <h3>Senderos del Paraguay</h3>
           <p class="muted">
-            Aplicación de turismo diseñada para dispositivos móviles y Windows, que permite explorar los principales
-            puntos turísticos de Paraguay mediante mapas interactivos. Integrada con <strong>Firebase</strong> para
-            gestión de usuarios y datos en tiempo real, y <strong>Mapbox</strong> para navegación y visualización de
-            ubicaciones. El proyecto está orientado a ofrecer una experiencia clara y atractiva al usuario final, con
-            interfaces intuitivas y controles eficientes.
+            Aplicación de turismo diseñada para dispositivos móviles y
+            Windows, que permite explorar los principales puntos turísticos de
+            Paraguay mediante mapas interactivos. Integrada con
+            <strong>Firebase</strong> para gestión de usuarios y datos en
+            tiempo real, y <strong>Mapbox</strong> para navegación y
+            visualización de ubicaciones. El proyecto está orientado a ofrecer
+            una experiencia clara y atractiva al usuario final, con interfaces
+            intuitivas y controles eficientes.
           </p>
           <div class="row">
             <span class="chip">Android</span><span class="chip">React</span><span class="chip">Firebase</span><span
               class="chip">Mapbox</span><span class="chip">Front-End</span>
           </div>
         </article>
-
-
       </div>
     </div>
   </section>
@@ -377,7 +380,6 @@
     </div>
   </section>
 
-
   <!-- ===== Experience ===== -->
   <section id="experience" class="section">
     <div class="container stack">
@@ -392,12 +394,18 @@
             <div class="timeline__head">
               <h3>Líder Nocturno (Ascenso)</h3>
               <span class="muted">Biggie Express — Febrero 2025 – Presente</span>
-              <span class="muted" style="display: block; font-size: 0.85rem;">Ciudad del Este, Paraguay</span>
+              <span class="muted" style="display: block; font-size: 0.85rem">Ciudad del Este, Paraguay</span>
             </div>
             <ul class="list">
               <li>Supervisión del personal durante el turno noche.</li>
-              <li>Asignación de tareas, control de desempeño y resolución de conflictos internos.</li>
-              <li>Manejo completo de caja: arqueo final, cierre y depósito de efectivo.</li>
+              <li>
+                Asignación de tareas, control de desempeño y resolución de
+                conflictos internos.
+              </li>
+              <li>
+                Manejo completo de caja: arqueo final, cierre y depósito de
+                efectivo.
+              </li>
               <li>Carga de facturas, preparación y envío de sobres.</li>
             </ul>
           </div>
@@ -409,13 +417,15 @@
             <div class="timeline__head">
               <h3>Cajero (Turno Día)</h3>
               <span class="muted">Biggie Express — 30 de Octubre 2024 – Febrero 2025</span>
-              <span class="muted" style="display: block; font-size: 0.85rem;">Ciudad del Este, Paraguay</span>
+              <span class="muted" style="display: block; font-size: 0.85rem">Ciudad del Este, Paraguay</span>
             </div>
             <ul class="list">
               <li>Atención al cliente y cobro de productos.</li>
               <li>Manejo de caja y arqueos durante el turno.</li>
               <li>Reposición de productos y orden del local.</li>
-              <li>Resolución básica de reclamos y apoyo operativo en tienda.</li>
+              <li>
+                Resolución básica de reclamos y apoyo operativo en tienda.
+              </li>
             </ul>
           </div>
         </div>
@@ -447,9 +457,14 @@
       </header>
 
       <article class="card contact">
-        <p><strong>Correo:</strong> <a href="mailto:neryortiz874@gmail.com">neryortiz874@gmail.com</a></p>
-        <p><strong>Teléfono:</strong> <a href="tel:+5950975617630">0975-617-630
-          </a></p>
+        <p>
+          <strong>Correo:</strong>
+          <a href="mailto:neryortiz874@gmail.com">neryortiz874@gmail.com</a>
+        </p>
+        <p>
+          <strong>Teléfono:</strong>
+          <a href="tel:+5950975617630">0975-617-630 </a>
+        </p>
       </article>
     </div>
   </section>
