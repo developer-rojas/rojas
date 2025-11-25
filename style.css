@@ -6,6 +6,124 @@
   margin: 0;
 }
 
+/* BOTÓN HAMBURGUESA */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: currentColor;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ANIMACIÓN DEL BOTÓN */
+.nav.open+.nav-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav.open+.nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav.open+.nav-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* MENÚ PRINCIPAL */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  /* cerrado */
+  height: 100vh;
+  background: var(--bg, #111);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+  padding-top: 5rem;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+
+/* MENÚ ABIERTO */
+.nav.open {
+  width: 75%;
+  max-width: 320px;
+}
+
+/* ITEMS */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border, #444);
+  border-radius: 12px;
+  margin: 0 1rem;
+  background: var(--card-bg, #1a1a1a);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s;
+}
+
+.nav-item:hover {
+  background: var(--card-hover, #222);
+}
+
+/* ICONOS */
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* BOTÓN TEMA */
+.theme {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border, #444);
+  border-radius: 12px;
+  background: var(--card-bg, #1a1a1a);
+}
+
+/* MODO ESCRITORIO */
+@media (min-width: 768px) {
+  .nav {
+    position: static;
+    height: auto;
+    width: auto;
+    flex-direction: row;
+    background: transparent;
+    padding-top: 0;
+  }
+
+  .nav-item {
+    margin: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+
 html:focus-within {
   scroll-behavior: smooth;
 }

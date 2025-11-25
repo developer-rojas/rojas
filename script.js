@@ -1,13 +1,13 @@
 // Mobile nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(open));
-  });
-  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
-}
+const toggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+
+  const expanded = nav.classList.contains("open");
+  toggle.setAttribute("aria-expanded", expanded);
+});
 
 // Theme toggle (persisted)
 const root = document.documentElement;
@@ -22,6 +22,11 @@ if (themeBtn) {
     localStorage.setItem('theme', next);
   });
 }
+
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
 
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
