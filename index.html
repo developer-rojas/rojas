@@ -10,16 +10,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+  <style>
+    /* Ajustes para el botón de tema y el menú de navegación */
+    @media (min-width: 768px) {
+      .header__bar {
+        position: relative;
+      }
+
+      #themeToggle {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    @media (max-width: 767px) {
+      #themeToggle {
+        display: none; /* Ocultar por defecto en móvil */
+      }
+      .nav.is-open #themeToggle {
+        display: flex; /* Mostrar solo cuando el menú está abierto */
+        margin-top: 1rem;
+        padding: 0.5rem;
+        width: auto;
+      }
+      [data-theme="light"] .nav.is-open { background-color: #fff; }
+      [data-theme="dark"] .nav.is-open { background-color: #111; }
+    }
+  </style>
 </head>
 
 <body>
   <!-- ===== Header ===== -->
   <header class="header" role="banner">
     <div class="container header__bar">
-      <a class="brand" href="#home">
-        <img src="/assets/img/logo.svg" alt="Logo Nery Ortiz" style="width: 60px; height: 60px;">
-        <span class="brand__text">Nery Ortiz</span>
-      </a>
+  
       
       <nav id="main-nav" class="nav" aria-label="Primary">
         <a href="#home" class="nav-item">
@@ -93,15 +119,16 @@
           </svg>
           <span>Contacto</span>
         </a>
-        <button id="themeToggle" class="theme" aria-label="Theme">
-          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 1 0 21 12.79Z" />
-          </svg>
-        </button>
       </nav>
 
       <button class="nav-toggle" aria-label="Menu" aria-controls="main-nav"
         aria-expanded="false"><span></span><span></span><span></span></button>
+
+      <button id="themeToggle" class="theme" aria-label="Theme">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+        </svg>
+      </button>
     </div>
   </header>
 

@@ -153,7 +153,7 @@
 
   .theme {
     margin: 0; /* Resetea el margen del botón de tema */
-    padding: 0; /* Reinicia el padding del botón de tema */
+    padding: 0.5rem; /* Padding para un área de clic adecuada */
     border: none; /* Reinicia el borde del botón de tema */
     min-height: auto; /* Anula el min-height: 100vh del móvil */
     display: flex; /* Asegura que se muestre como flex para alinear el icono */
