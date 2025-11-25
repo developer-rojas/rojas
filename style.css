@@ -108,21 +108,26 @@
     width: auto;
     flex-direction: row;
     background: transparent;
-    gap: 1rem; /* Añade espacio entre los elementos del menú */
+    gap: 1.5rem; /* Aumentamos el espacio entre elementos para un look más limpio */
     padding-top: 0;
     overflow: visible; /* Asegura que no haya recortes inesperados */
+    align-items: center; /* Centra verticalmente los items del nav */
+    transition: none; /* Desactiva la transición de 'width' en escritorio */
   }
 
   .nav-item {
     margin: 0;
     border: none;
     background: none;
-    padding: 0.5rem; /* Reduce el padding para un look más compacto */
-    border-radius: 8px; /* Bordes redondeados sutiles para el hover */
+    padding: 0; /* Eliminamos todo el padding */
+    border-radius: 0;
+    gap: 0.5rem; /* Espacio entre el icono y el texto */
+    transition: color 0.2s ease;
   }
 
   .nav-item:hover {
-    background: var(--border); /* Un fondo sutil al pasar el ratón */
+    background: transparent; /* Nos aseguramos que no haya fondo */
+    color: var(--primary); /* Cambia el color del texto e icono al pasar el ratón */
   }
 
   .theme {
