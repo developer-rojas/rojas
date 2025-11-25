@@ -108,14 +108,25 @@
     width: auto;
     flex-direction: row;
     background: transparent;
+    gap: 1rem; /* Añade espacio entre los elementos del menú */
     padding-top: 0;
+    overflow: visible; /* Asegura que no haya recortes inesperados */
   }
 
   .nav-item {
     margin: 0;
     border: none;
     background: none;
-    border-radius: 0;
+    padding: 0.5rem; /* Reduce el padding para un look más compacto */
+    border-radius: 8px; /* Bordes redondeados sutiles para el hover */
+  }
+
+  .nav-item:hover {
+    background: var(--border); /* Un fondo sutil al pasar el ratón */
+  }
+
+  .theme {
+    margin: 0; /* Resetea el margen del botón de tema */
   }
 
   .nav-toggle {
